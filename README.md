@@ -3,7 +3,7 @@
 # Health and survival transition data
 
 This is the companion website for the paper 
-["Health Dynamics and Heterogeneous Life Expectancies"](https://www.foltyn.net/googlesites/health-process.pdf ) 
+["Health Dynamics and Heterogeneous Life Expectancies"](https://www.foltyn.net/research/FO_health_dynamics.pdf ) 
 which hosts the health-to-health and survival transition probabilities
 estimated from the [Health and Retirement Study (HRS)](https://hrs.isr.umich.edu/about)
 for the United States

@@ -22,7 +22,9 @@ If you are using the material in your research, please cite
 
 You can download the citation in [BibTeX format](health-process.bib).
 
-## Data files ## 
+***
+
+## Health and survival probabilities ## 
 
 1.  The root directory contains the estimates for the model with 
     all five health states reported in the HRS.
@@ -34,7 +36,7 @@ You can download the citation in [BibTeX format](health-process.bib).
     where the first three health states are merged into one group and the 
     last two form the other group.
 
-## How to use the data ##
+### How to use the data ###
 
 The CSV files contain the health-to-health transition
 and survival probabilities for individuals aged 50 to 99. 
@@ -50,9 +52,9 @@ The CSV files have the following format:
 -   The sixth line is present for completeness so that each age-specific
     transition matrix is 6-by-6. It represents the absorbing state of death.
 
-### Loading the data ###
+#### Loading the data ####
 
-#### Python ####
+##### Python #####
 
 The easiest way to load the CSV files is to use the [pandas](https://pandas.pydata.org/)
 library:
@@ -92,7 +94,7 @@ health = np.array(data[:, 1], dtype=int)
 ```    
 
 
-## Transition probabilities at two-year horizons ##
+### Transition probabilities at two-year horizons ###
 
 The next four graphs show the _two-year_ probabilities of transitioning
 between the five self-reported health states _conditional_ on survival,
@@ -107,22 +109,35 @@ race and gender for the male/female and black/nonblack subpopulations.
 Shaded areas represent bootstrapped 95% confidence intervals (not included
 in the data files).
 
-### Male/nonblack ###
+#### Male/nonblack ####
 ![male/nonblack](images/trans_prob_male_nonblack_T2.png)
-### Female/nonblack ###
+#### Female/nonblack ####
 ![female/nonblack](images/trans_prob_female_nonblack_T2.png)
-### Male/black ###
+#### Male/black ####
 ![male/black](images/trans_prob_male_black_T2.png)
-### Female/black ###
+#### Female/black ####
 ![female/black](images/trans_prob_female_black_T2.png)
 
 
-## Transition probabilities at one-year horizons ##
+### Transition probabilities at one-year horizons ###
 
 The next two graphs show the _annual_ transition probabilities which
 correspond to the contents of the data files.
 
-### Male/nonblack and female/nonblack ###
+#### Male/nonblack and female/nonblack ####
 ![nonblack](images/trans_prob_nonblack_T1.png)
-### Male/black and female/black ###
+#### Male/black and female/black ####
 ![black](images/trans_prob_black_T1.png)
+
+***
+
+## Empirical health distribution ## 
+
+To perform simulations using the above transition and survival probabilities,
+an initial health distribution is required.
+
+-   We provide the empirical distribution over health at age 50-51 and 
+    age 70-71 observed in the HRS in the files `CSV/H5_health_dist.csv` 
+    or `Excel/H5_health_dist.xlsx` for black/nonblack and male/female groups.
+-   These population shares are computed from the estimation sample using
+    the respondent-level weights.

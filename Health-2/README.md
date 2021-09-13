@@ -11,7 +11,7 @@ are formed by combining the original five health states as follows:
 ## Transition probabilities at two-year horizons ##
 
 The next four graphs show the _two-year_ probabilities of transitioning
-between the two health states conditional on survival,
+between the two health states _conditional_ on survival,
 as well as the survival probability for each initial health state and age.
 The model estimates _annual_ probabilities from biennial HRS data,
 so when comparing the estimates to raw data, these need to be transformed

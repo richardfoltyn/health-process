@@ -46,8 +46,7 @@ The CSV files have the following format:
 -   Within each block, the first 5 lines correspond to the initial health
     state: (1) excellent, (2) very good, ..., (5) poor.
 -   Each column corresponds to one outcome: the first 5 columns are 
-    health states conditional on survival, and the last column is the
-    probability of dying.
+    health states, and the last column is the probability of dying.
 -   The sixth line is present for completeness so that each age-specific
     transition matrix is 6-by-6. It represents the absorbing state of death.
 
@@ -96,7 +95,7 @@ health = np.array(data[:, 1], dtype=int)
 ## Transition probabilities at two-year horizons ##
 
 The next four graphs show the _two-year_ probabilities of transitioning
-between the five self-reported health states conditional on survival,
+between the five self-reported health states _conditional_ on survival,
 as well as the survival probability for each initial health state and age.
 The model estimates _annual_ probabilities from biennial HRS data,
 so when comparing the estimates to raw data, these need to be transformed

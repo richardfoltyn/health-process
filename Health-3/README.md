@@ -1,7 +1,7 @@
 
 # Health and survival transition data for three health states
 
-## Data files ## 
+## Health and survival probabilities ## 
 
 This directory contains estimates for a model with **three** health states which
 are formed by combining the original five health states as follows:
@@ -9,7 +9,7 @@ are formed by combining the original five health states as follows:
 -   Middle: equivalent to the original "good" health
 -   Worst: obtained by merging "fair" and "poor"
 
-## Transition probabilities at two-year horizons ##
+### Transition probabilities at two-year horizons ###
 
 The next four graphs show the _two-year_ probabilities of transitioning
 between the three health states _conditional_ on survival,
@@ -24,13 +24,13 @@ race and gender for the male/female and black/nonblack subpopulations.
 Shaded areas represent bootstrapped 95% confidence intervals (not included
 in the data files).
 
-### Male/nonblack ###
+#### Male/nonblack ####
 ![male/nonblack](images/trans_prob_male_nonblack_T2.png)
-### Female/nonblack ###
+#### Female/nonblack ####
 ![female/nonblack](images/trans_prob_female_nonblack_T2.png)
-### Male/black ###
+#### Male/black ####
 ![male/black](images/trans_prob_male_black_T2.png)
-### Female/black ###
+#### Female/black ####
 ![female/black](images/trans_prob_female_black_T2.png)
 
 
@@ -39,7 +39,20 @@ in the data files).
 The next two graphs show the _annual_ transition probabilities which
 correspond to the contents of the data files.
 
-### Male/nonblack and female/nonblack ###
+#### Male/nonblack and female/nonblack ####
 ![nonblack](images/trans_prob_nonblack_T1.png)
-### Male/black and female/black ###
+#### Male/black and female/black ####
 ![black](images/trans_prob_black_T1.png)
+
+***
+
+## Empirical health distribution ## 
+
+To perform simulations using the above transition and survival probabilities,
+an initial health distribution is required.
+
+-   We provide the empirical distribution over health at age 50-51 and 
+    age 70-71 observed in the HRS in the files `CSV/H3_health_dist.csv` 
+    or `Excel/H3_health_dist.xlsx` for black/nonblack and male/female groups.
+-   These population shares are computed from the estimation sample using
+    the respondent-level weights.
